@@ -31,7 +31,7 @@ class MySingleLinkList{
         this.tail = this.head; /* como es el primer valor apunta de nuevo a la cabeza */
         this.length  = 1; /* obligamos que cuando se haga la instancia de la clase de agregue el primer nodo o sea lleva un elemento si o si  */
     }
-    append(value){
+    append(value){ //agregar un elemento al final de lista.
         const newNode = new Nodo(value);
 
         this.tail.next = newNode; //agregamos el nodo a la cola
@@ -40,13 +40,12 @@ class MySingleLinkList{
 
         return this
     }
-    prepend(value){
+    prepend(value){ //agregar un nodo al comienzo de la linked list.
         const newNode = new Nodo(value);
         newNode.next = this.head; //Hago que el nodo sea la cabeza
         this.head = newNode; // asigno el nodo a la cabeza.
         this.length++; //incremento el valor de la lista en 1.
         return this;
-        
     }
 }
 
